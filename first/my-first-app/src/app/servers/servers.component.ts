@@ -7,6 +7,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class ServersComponent implements OnInit {
   allowAddServer = false;
+  servers = ["Server 1", "Server 2"];
 
   constructor() {
     setTimeout(() => {
@@ -15,4 +16,15 @@ export class ServersComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  username : String;
+
+  onClickClear(){
+    this.username = "";
+  }
+
+  onClickAddServer(){
+    this.servers.push("Server")
+  }
+
 }

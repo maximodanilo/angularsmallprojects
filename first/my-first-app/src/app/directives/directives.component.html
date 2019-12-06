@@ -1,0 +1,17 @@
+<p>directives works!</p>
+
+<button class="btn btn-primary" (click)="onToggleSecret()">
+  Display Details
+</button>
+
+<p *ngIf="toggleSecret">Secrect Password='tuna'</p>
+
+<ul>
+  <li
+    *ngFor="let click of clicks"
+    [ngStyle]="{'background-color': click > 4 ? 'blue' : 'white'}"
+    [ngClass]="{greaterThan4: click > 4}"
+  >
+    {{ click }}
+  </li>
+</ul>
