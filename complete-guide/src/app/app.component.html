@@ -1,10 +1,14 @@
-<app-header></app-header>
+<app-header (headerItemClicked)="onHeaderItemClicked($event)"></app-header>
 
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipe-book></app-recipe-book>
-      <app-shopping-list></app-shopping-list>
+
+      
+      <app-recipe-book *ngIf="itemClicked === 'recipesItem' " ></app-recipe-book>
+      <app-shopping-list *ngIf="itemClicked === 'shoppingItem' "></app-shopping-list>
+      <app-home *ngIf="itemClicked === 'home' "></app-home>
+
     </div>
   </div>
 </div>
