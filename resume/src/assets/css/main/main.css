@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700&family=Montserrat:wght@300;400;700&family=Open+Sans:ital,wght@0,300;0,600;1,300;1,700&display=swap');
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Manrope', sans-serif;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.toolbar {
+    height: 60px;
+    margin: -8px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+}
+
+.toolbar img {
+    margin: 0 16px;
+}
+
+main {
+    margin: 5em 10em;
+    padding: 2em 4em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: grid;
+    grid-template-columns: auto 30%;
+    grid-template-rows: auto;
+}
+
+.right-section {
+    grid-column-start: 2;
+    border: 1px solid grey;
+}
+
+.main-section {
+    grid-column-start: 1;
+    border: 1px solid grey;
+}
