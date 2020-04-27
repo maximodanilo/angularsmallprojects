@@ -1,15 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700&family=Montserrat:wght@300;400;700&family=Open+Sans:ital,wght@0,300;0,600;1,300;1,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700&family=Montserrat:wght@300;400;700&family=Open+Sans:ital,wght@0,300;0,600;1,300;1,700&display=swap'); */
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p,
+button {
     font-family: 'Manrope', sans-serif;
 }
 
 .title {
     font-weight: bold;
+    font-size: 2em;
+}
+
+.subtitle {
+    margin-top: -1em;
+    color: darkgrey;
 }
 
 .toolbar {
@@ -27,6 +36,8 @@ h6 {
 }
 
 main {
+    min-width: 50em;
+    min-height: 70em;
     margin: 5em 10em;
     padding: 2em 4em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -37,10 +48,21 @@ main {
 
 .right-section {
     grid-column-start: 2;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
 }
 
 .main-section {
     grid-column-start: 1;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
+}
+
+.btn {
+    padding: .5em 1em;
+    margin: .2em;
+    background-color: #1976d2;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    font-weight: bold;
 }

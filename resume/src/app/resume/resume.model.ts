@@ -3,13 +3,15 @@ import { ResumeSection } from './resume-section/resume-section.model';
 export class Resume {
     private id: number;
     private name: string;
+    private brief: string;
     private resumeSection: ResumeSection[];
 
 
-    constructor($id: number, $name: string, $resumeSection: ResumeSection[]) {
+    constructor($id: number, $name: string, $brief: string, $resumeSection: ResumeSection[]) {
         this.id = $id;
         this.name = $name;
         this.resumeSection = $resumeSection;
+        this.brief = $brief;
     }
 
 
@@ -52,6 +54,24 @@ export class Resume {
      */
     public get $resumeSection(): ResumeSection[] {
         return this.resumeSection;
+    }
+
+
+
+    /**
+     * Getter $brief
+     * @return {string}
+     */
+    public get $brief(): string {
+        return this.brief;
+    }
+
+    /**
+     * Setter $brief
+     * @param {string} value
+     */
+    public set $brief(value: string) {
+        this.brief = value;
     }
 
     /**

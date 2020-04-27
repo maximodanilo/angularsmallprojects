@@ -5,15 +5,17 @@ export class ResumeSection {
     private description: string;
     private period: string;
     private isEditing: boolean;
+    private layoutColumn: number;
 
 
-    constructor($id: string, $title: string, $subtitle: string, $period: string, $description: string, $isEditing: boolean) {
+    constructor($id: string, $title: string, $subtitle: string, $period: string, $description: string, $isEditing: boolean, $layoutColumn: number) {
         this.id = $id;
         this.title = $title;
         this.subtitle = $subtitle;
         this.period = $period;
         this.description = $description;
         this.isEditing = $isEditing;
+        this.layoutColumn = $layoutColumn;
     }
 
 
@@ -116,6 +118,22 @@ export class ResumeSection {
      */
     public set $period(value: string) {
         this.period = value;
+    }
+
+    /**
+     * Getter $layoutColumn
+     * @return {number}
+     */
+    public get $layoutColumn(): number {
+        return this.layoutColumn;
+    }
+
+    /**
+     * Setter $layoutColumn
+     * @param {number} value
+     */
+    public set $layoutColumn(value: number) {
+        this.layoutColumn = value;
     }
 
 

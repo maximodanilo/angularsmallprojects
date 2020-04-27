@@ -34,4 +34,8 @@ export class ResumeSectionEditComponent implements OnInit {
     this.resumeSectionService.saveSection(this.section.$id, this.section);
   }
 
+  onCancel() {
+    this.section.$isEditing = false;
+  }
+
 }

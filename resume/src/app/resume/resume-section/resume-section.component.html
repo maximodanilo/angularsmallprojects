@@ -1,15 +1,14 @@
-<br>
-<div *ngIf="!section.isEditing; else writeMode">
-    <h3>{{section.title}}</h3>
-    <h5>{{section.subtitle}} - {{section.period}}</h5>
-    <p>{{section.description}}</p>
+<div class="left-bar each-section">
+    <div *ngIf="!section.isEditing; else writeMode">
+        <h3>{{section.title}}</h3>
+        <h5 class="subtitle">{{section.subtitle}} - {{section.period}}</h5>
+        <p>{{section.description}}</p>
+    </div>
+    <ng-template #writeMode>
+        <app-resume-section-edit [section]="section"></app-resume-section-edit>
+    </ng-template>
+
+    <button *ngIf="!section.isEditing" #writeMode class="btn" (click)="editSection()"> Edit </button>
+    <button class="btn" (click)="deleteSection()"> Delete </button>
+
 </div>
-<ng-template #writeMode>
-    <app-resume-section-edit [section]="section"></app-resume-section-edit>
-</ng-template>
-
-
-<div style="cursor: pointer; border: 1px solid grey; display: table-cell;" (click)="editSection()"> Edit </div>
-<div style="cursor: pointer; border: 1px solid grey; display: table-cell;" (click)="deleteSection()"> Delete </div>
-
-<br>

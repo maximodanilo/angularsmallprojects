@@ -1,0 +1,27 @@
+.section-edit {
+    /* border: 1px solid blue; */
+    font-family: 'Manrope', sans-serif;
+}
+
+.section-edit-input {
+    padding: .2em;
+    margin-top: .2em;
+    width: 40em;
+    display: block;
+    font-family: 'Manrope', sans-serif;
+    /* margin: 5em; */
+}
+
+.btns {
+    margin-top: .5em;
+}
+
+.cancel {
+    cursor: pointer;
+    color: orangered;
+    padding-left: .3em;
+}
+
+.cancel:hover {
+    color: orange;
+}

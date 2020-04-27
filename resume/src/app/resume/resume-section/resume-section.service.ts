@@ -14,7 +14,8 @@ export class ResumeSectionService {
                 "Computer methods corporation",
                 "Oct 2016(Current)",
                 "Created several APIs using java, pl/sql and etc",
-                false),
+                false,
+                1),
 
             new ResumeSection(
                 '2',
@@ -22,8 +23,19 @@ export class ResumeSectionService {
                 "Ihunter",
                 "Feb 2011 May 2016",
                 "Created several APIs using pl/sql, csv files and etc",
-                false
+                false,
+                1
+            ),
+            new ResumeSection(
+                '3',
+                "",
+                "",
+                "",
+                "maximo.danilo@gmail.com",
+                false,
+                2
             )
+
         ]
 
     /**
@@ -56,7 +68,7 @@ export class ResumeSectionService {
 
     addSection() {
         const myId = uuid.v4();
-        const newSection = new ResumeSection(myId, '', '', '', '', true);
+        const newSection = new ResumeSection(myId, '', '', '', '', true, 1);
         this.daniloResumeSections.push(newSection);
         this.sectionsChanged.emit(this.daniloResumeSections);
     }

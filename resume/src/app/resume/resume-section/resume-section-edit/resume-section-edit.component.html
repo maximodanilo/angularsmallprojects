@@ -1,28 +1,29 @@
-<div class="row">
-    <div class="col-xs-12">
+<div class="section-edit">
+    <div>
         <form>
-            <div class="row">
-                <div class="col-sm-5 form-group">
+            <div>
+                <div>
                     <label for="title">Title</label>
-                    <input type="text" id="title" class="form-control" value={{section.title}} #titleInput />
+                    <input class="section-edit-input" type="text" id="title" value={{section.title}} #titleInput />
                 </div>
-                <div class="col-sm-2 form-group">
+                <div>
                     <label for="subtitle">Subtitle</label>
-                    <input type="text" id="subtitle" class="form-control" value={{section.subtitle}} #subtitleInput />
+                    <input class="section-edit-input" type="text" id="subtitle" value={{section.subtitle}} #subtitleInput />
                 </div>
-                <div class="col-sm-2 form-group">
+                <div>
                     <label for="period">Period</label>
-                    <input type="text" id="period" class="form-control" value={{section.period}} #periodInput />
+                    <input class="section-edit-input" type="text" id="period" value={{section.period}} #periodInput />
                 </div>
-                <div class="col-sm-2 form-group">
+                <div>
                     <label for="description">Description</label>
-                    <input type="text" id="description" class="form-control" value={{section.description}} #descriptionInput />
+                    <textarea rows="8" cols="50" class="section-edit-input" type="text" id="description" value={{section.description}} #descriptionInput></textarea>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <button class="btn btn-success" type="button" (click)="onSave()">Save</button>
-                    <button class="btn btn-warning" type="button" (click)="onClear()">Clear</button>
+            <div>
+                <div class="btns">
+                    <button class="btn" type="button" (click)="onSave()">Save</button>
+                    <button class="btn" type="button" (click)="onClear()">Clear</button>
+                    <a class="cancel" (click)="onCancel()">cancel</a>
                 </div>
             </div>
 

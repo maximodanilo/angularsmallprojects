@@ -15,13 +15,19 @@
 <main>
     <section class="main-section">
         <h1 class='title'>{{resume.name}}</h1>
-        <div *ngFor="let section of resume.resumeSection">
-            <app-resume-section [section]="section"></app-resume-section>
-        </div>
-        <div>
-            <h1 style="cursor: pointer; border: 1px solid grey; text-align: center;" (click)="addSection()">+</h1>
+        <p class='subtitle'>{{resume.brief}}</p>
+
+
+        <div class="sections">
+            <div *ngFor="let section of resume.resumeSection">
+                <app-resume-section [section]="section"></app-resume-section>
+            </div>
+            <div>
+                <button class="btn addSection" style="width: 100%;" (click)="addSection()">+</button>
+            </div>
         </div>
     </section>
+
     <section class="right-section">
         <h1>rigth column</h1>
     </section>
